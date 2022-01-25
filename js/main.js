@@ -125,8 +125,8 @@ let namesWithComma=studentsNames.join( ',');
 console.log(namesWithComma)
 
 //9. Добавьте всем студентам свойство "isStudent" со значением true (map)
-// let trueStudents=newDeepCopyStudents.map(m=>({...m, isStudent = true}));
-// console.log(trueStudents)
+let trueStudents=newDeepCopyStudents.map(m=>({...m, isStudent: true}));
+console.log(trueStudents)
 
 //10. Nick женился. Выполните выполните соответствующие преобразование массива students (map)
 let studentsWithMarriedNick=newDeepCopyStudents.map(m=> m.name==="Nick" ? {...m,isMarried:true}: m);
@@ -139,14 +139,12 @@ console.log(ann)
 //12. Найдите студента с самым высоким баллом (reduce)
 // - c помощью reduce
 // - не испльзуя методы массивов и Math.max()
-let bestStudent;
-console.log(bestStudent)
+ let bestStudent=newDeepCopyStudents.reduce((top,stud)=>top.scores>stud.scores? top:stud);
+ console.log(bestStudent)
 
 //13. Найдите сумму баллов всех студентов (reduce)
 
-// И поднимаем руку!!!!
-
-let scoresSum;
+let scoresSum=newDeepCopyStudents.reduce((sum,el)=> sum+el.scores, 0);
 console.log(scoresSum)
 // 14. Д.З.:
 // Напишите функцию addFriends, которая принимает параметром массив students
@@ -154,7 +152,7 @@ console.log(scoresSum)
 // значением которого является массив имён всех остальных студентов из массива students,
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 const addFriends = (students) => {
-    //..............................
+    return students.map(m=>({...m,frends:studentsNames.filter(n=>n!==students.name)}))
 }
 console.log(addFriends(students));
 
