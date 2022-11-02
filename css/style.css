@@ -1,3 +1,23 @@
 *{
     box-sizing: border-box;
 }
+#i1{
+    background-color: pink;
+    color:pink !important;
+}
+#i2{
+    background-color: yellow;
+}
+.a1 .a3{
+    background-color: blue;
+    color: green;
+}
+.a2.a3{
+    color: blue;
+}
+.a1 .a2.a3{
+    background-color: black;
+}
+.a2{
+    background-color: red;
+}
