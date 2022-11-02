@@ -45,12 +45,19 @@ const students = [
 const user={
     name:'Alex',
     showName(){
-        console.log(this.name)
+        console.log(this)
     }
 }
+const hanna={
+    name:'Hanna'
+}
 user.showName()
-const foo=user.showName
-console.log(foo)
+user.showName.call(hanna)//window
+
+
+
+
+
 
 
 
