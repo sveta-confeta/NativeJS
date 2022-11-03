@@ -41,16 +41,26 @@ const students = [
 //     return students.map(m=>({...m,friemds:name.filter(f=> f!==m.name)}))
 // }
 // console.log(addFriends(students))
-let a={
-    name:"23"
-}
-const user={
-    name:'Alex',
-    showName(){
-        console.log(this.name)
+
+const carProtorype={
+    count:4,
+    showMark(){
+        console.log(this.mark)
     }
 }
-setTimeout(user.showName(), 1000)
+
+const ford ={
+    mark:'Ford'
+}
+const bmv={
+    mark:'Bmv'
+}
+
+ford.f=carProtorype.showMark
+bmv.f=carProtorype.showMark
+
+ford.f()
+bmv.f()
 
 
 
