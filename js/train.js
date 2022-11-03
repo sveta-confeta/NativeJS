@@ -41,18 +41,17 @@ const students = [
 //     return students.map(m=>({...m,friemds:name.filter(f=> f!==m.name)}))
 // }
 // console.log(addFriends(students))
-
+let a={
+    name:"23"
+}
 const user={
     name:'Alex',
     showName(){
-        console.log(this)
+        console.log(this.name)
     }
 }
-const hanna={
-    name:'Hanna'
-}
-user.showName()
-user.showName.call(hanna)//window
+setTimeout(user.showName(), 1000)
+
 
 
 
