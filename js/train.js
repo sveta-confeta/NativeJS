@@ -81,8 +81,18 @@ user.showName()
 // for или str.repeat()
 
 
-function repeatString(str,num,arg ){
-// return str.repeat(num)
-    return new Array(num).fill(str).join(arg);
+// function repeatString(str,num,arg ){
+// // return str.repeat(num)
+//     return new Array(num).fill(str).join(arg);
+// }
+// console.log(repeatString('lo',3, ', ' ))
+
+//2. Реализуйте функцию, которая принимает параметром сторку и подстроку, а возвращает true, если строка начинается с указанной подстроки, в противном случае - false. Регистр не учитывается.
+// checkStart("Incubator", "inc") => true
+// checkStart("Incubator", "yo") => false
+// str.startWith() slice indexOF
+
+function checkStart(str, p){
+    return str.startsWith(p)
 }
-console.log(repeatString('lo',3, ', ' ))
+console.log(checkStart('incubator' ,'f'))
