@@ -92,7 +92,16 @@ user.showName()
 // checkStart("Incubator", "yo") => false
 // str.startWith() slice indexOF
 
-function checkStart(str, p){
-    return str.startsWith(p)
+// function checkStart(str, p){
+//     return str.startsWith(p)
+// }
+// console.log(checkStart('incubator' ,'f'))
+
+//3. Реализуйте функцию, которая принимает параметром строку и число (количество символов), а возвращает строку из параметров, обрезанную до указанного количества символов и завершает её многоточием.
+//truncateString("Всем студентам инкубатора желаю удачи!", 10) => "Всем студе..."
+function truncateString(str,num){
+    return str.substring(0,num) +'...'
 }
-console.log(checkStart('incubator' ,'f'))
+
+console.log(truncateString
+("Всем студентам инкубатора желаю удачи!", 10))
