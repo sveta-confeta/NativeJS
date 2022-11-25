@@ -42,22 +42,23 @@ const students = [
 // }
 // console.log(addFriends(students))
 
-function User(name){
-    this.name=name
+function User(name) {
+    this.name = name
 }
-const alex=new User('Alex')
-const hanna=new User('Hanna')
+
+const alex = new User('Alex')
+const hanna = new User('Hanna')
 
 
-const userMetods={
-    showName(){
+const userMetods = {
+    showName() {
         console.log(this.name)
     }
 }
 
-const user={ name:'Alex'}
+const user = {name: 'Alex'}
 
-user.__proto__=userMetods
+user.__proto__ = userMetods
 user.showName()
 
 
@@ -99,9 +100,32 @@ user.showName()
 
 //3. Реализуйте функцию, которая принимает параметром строку и число (количество символов), а возвращает строку из параметров, обрезанную до указанного количества символов и завершает её многоточием.
 //truncateString("Всем студентам инкубатора желаю удачи!", 10) => "Всем студе..."
-function truncateString(str,num){
-    return str.substring(0,num) +'...'
+// function truncateString(str,num){
+//     return str.substring(0,num) +'...'
+// }
+//
+// console.log(truncateString
+// ("Всем студентам инкубатора желаю удачи!", 10))
+
+//4. Реализуйте функцию, которая принимает параметром сторку (предложение) и возвращает самое короткое слово в предложении, если в параметрах пустая строка, то возвращает null.
+// getMinLengthWord("Всем студентам инкубатора желаю удачи!") => "Всем"
+// getMinLengthWord("") => null
+// split()
+
+function truncateString(str) {
+
+    const orderedArray = str.split(" ").sort((a, b) => a.length > b.length ? 1 : -1)
+     if(str){
+         return orderedArray[0]
+     }else {
+        return null
+     }
+
 }
 
-console.log(truncateString
-("Всем студентам инкубатора желаю удачи!", 10))
+console.log(truncateString(''))
+
+// 5. Реализуйте функцию, которая принимает параметром сторку (предложение) и возвращает то же предложение, где все слова написаны строчными, но начинаются с заглавных букв.
+// setUpperCase("всем стУдентам инкуБатора Желаю удачИ!") => "Всем Студентам Инкубатора Желаю Удачи!"
+
+// !!!!!!!!!!!!!!!!!!После решения 5 задач - поднимаем руку!!!!!!!!
