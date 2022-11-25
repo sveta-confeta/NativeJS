@@ -112,20 +112,37 @@ user.showName()
 // getMinLengthWord("") => null
 // split()
 
-function truncateString(str) {
-
-    const orderedArray = str.split(" ").sort((a, b) => a.length > b.length ? 1 : -1)
-     if(str){
-         return orderedArray[0]
-     }else {
-        return null
-     }
-
-}
-
-console.log(truncateString(''))
+// function truncateString(str) {
+//
+//     const orderedArray = str.split(" ").sort((a, b) => a.length > b.length ? 1 : -1)
+//      if(str){
+//          return orderedArray[0]
+//      }else {
+//         return null
+//      }
+//
+// }
+//
+// console.log(truncateString(''))
 
 // 5. Реализуйте функцию, которая принимает параметром сторку (предложение) и возвращает то же предложение, где все слова написаны строчными, но начинаются с заглавных букв.
 // setUpperCase("всем стУдентам инкуБатора Желаю удачИ!") => "Всем Студентам Инкубатора Желаю Удачи!"
 
 // !!!!!!!!!!!!!!!!!!После решения 5 задач - поднимаем руку!!!!!!!!
+
+//6. Реализуйте функцию, котрая принимает параметрами строку и подстроку. Если все
+// символы подстроки содержаться в стороке - возвращает true, если нет -
+// возвращает false. Проверка проводится без учёта регистра и без учётом
+// повторяющихся символов.
+//* попробовать учитывать повтор символов в подстроке
+
+// isIncludes("Incubator", "Cut") => true
+// isIncludes("Incubator", "table") => false
+// isIncludes("Incubator", "inbba") => true
+// isIncludes("Incubator", "inba") => true
+// isIncludes("Incubator", "Incubatorrr")=> true
+
+function checkStart(str, p){
+    return str.includes(p)
+}
+console.log(checkStart('incubator' ,'i'))
