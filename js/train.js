@@ -142,7 +142,39 @@ user.showName()
 // isIncludes("Incubator", "inba") => true
 // isIncludes("Incubator", "Incubatorrr")=> true
 
-function checkStart(str, p){
-    return str.includes(p)
+//Реализуйте функцию, котрая принимает параметрами строку и подстроку. Если всем
+// символы подстроки содержаться в стороке - возвращает true, если нет -
+// возвращает false
+
+// function test(a,b) {
+// let x=[];
+//    for(let i=a;a<=b;a++){
+//        if(a>b){
+//            x.push(i++)
+//        }
+//
+//    }
+//    let d=x.join(" ")
+//    return d;
+//  }
+//
+// console.log(test(3,8))
+//cумма массива циклом и редьюсом
+function sumNum(...nums) {
+    let sum = 0
+    for(el of nums){
+        sum=sum+el
+    }
+    return sum
 }
-console.log(checkStart('incubator' ,'i'))
+
+console.log(sumNum(5,8,9,11))
+
+function sumNum2(...nums) {
+   let sum=nums.reduce((acc,el)=>{
+      return  acc+el
+   })
+    return sum
+}
+
+console.log(sumNum2(5,8,9,11))
