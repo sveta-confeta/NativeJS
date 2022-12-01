@@ -178,3 +178,17 @@ function sumNum2(...nums) {
 }
 
 console.log(sumNum2(5,8,9,11))
+
+
+// 3. Функция getSum принимает параметром целое число и возвращает
+// сумму цифр этого числа
+
+ function getSum(number){
+   let arr=String(number).split("")
+    let sum=0;
+     for(el of arr){
+         sum=sum+(+el)
+     }
+    return sum
+}
+console.log(getSum(872))
