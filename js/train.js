@@ -162,33 +162,55 @@ user.showName()
 //cумма массива циклом и редьюсом
 function sumNum(...nums) {
     let sum = 0
-    for(el of nums){
-        sum=sum+el
+    for (el of nums) {
+        sum = sum + el
     }
     return sum
 }
 
-console.log(sumNum(5,8,9,11))
+console.log(sumNum(5, 8, 9, 11))
 
 function sumNum2(...nums) {
-   let sum=nums.reduce((acc,el)=>{
-      return  acc+el
-   })
+    let sum = nums.reduce((acc, el) => {
+        return acc + el
+    })
     return sum
 }
 
-console.log(sumNum2(5,8,9,11))
+console.log(sumNum2(5, 8, 9, 11))
 
 
 // 3. Функция getSum принимает параметром целое число и возвращает
 // сумму цифр этого числа
 
- function getSum(number){
-   let arr=String(number).split("")
-    let sum=0;
-     for(el of arr){
-         sum=sum+(+el)
-     }
+function getSum(number) {
+    let arr = String(number).split("")
+    let sum = 0;
+    for (el of arr) {
+        sum = sum + (+el)
+    }
     return sum
 }
+
 console.log(getSum(872))
+// 4. Функция isEvenIndexSumGreater принимает  параметром массив чисел.
+// Если сумма чисел с чётными ИНДЕКСАМИ!!! (0 как чётный индекс) больше
+// суммы чисел с нечётными ИНДЕКСАМИ!!!, то функция возвращает true.
+// В противном случае - false.
+
+ function isEvenIndexSumGreater(arr) {
+   let even1 = arr.map((n,i)=> (i%2===0) ? n :0 ).reduce((ac,el)=>ac+el);
+     let noeven=arr.map((n,i)=>i%2===1 ? n :0).reduce((ac,el)=>ac+el);
+     // let sumEven=0;
+     // let sumNoEven=0;
+     //
+     // for(el of even1){
+     //     sumEven=sumEven+el
+     // }
+     // for(el of noeven){
+     //     sumNoEven=sumNoEven+el
+     // }
+     return even1>noeven
+ }
+
+console.log(isEvenIndexSumGreater([3,4,7,10]))
