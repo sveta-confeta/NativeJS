@@ -215,29 +215,41 @@ console.log(sumNum2(5, 8, 9, 11))
 //
 // console.log(isEvenIndexSumGreater([3,4,7,10]))
 
-function Ner(num){
-    let sum=0;
-    if(num<10 || num >99){
-        alert("num<10 && num >99")
-        return
-    } else{
-        let arr=String(num).split('')
-       // for(let i=0;i<arr.length; i++){
-       //     sum=sum+arr[i];
-       //
-       // }
-       sum=arr.reduce((ac,el)=>{
-           ac+el
-       })
+// function Ner(num){
+//     let sum=0;
+//     if(num<10 || num >99){
+//         alert("num<10 && num >99")
+//         return
+//     } else{
+//         let arr=String(num).split('')
+//        // for(let i=0;i<arr.length; i++){
+//        //     sum=sum+arr[i];
+//        //
+//        // }
+//        sum=arr.reduce((ac,el)=>{
+//            ac+el
+//        })
+//
+//     }
+//
+//     if(sum<=9){
+//         alert("<=9")
+//     }else{
+//         alert("00")
+//     }
+//
+// }
+//
+// console.log(Ner(98))
 
+let arr=[1,9,65,44,876,987,234,9,2,4]
+let res=[]
+for(let i=0;i<arr.length; i++){
+         let der=String(arr[i]);
+         if(der[0]==4 || der[0]==2){
+res.push(der)
     }
 
-    if(sum<=9){
-        alert("<=9")
-    }else{
-        alert("00")
-    }
-
-}
-
-console.log(Ner(98))
+       }
+console.log(res)
+// console.log(sum)
