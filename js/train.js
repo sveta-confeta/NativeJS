@@ -180,37 +180,64 @@ function sumNum2(...nums) {
 console.log(sumNum2(5, 8, 9, 11))
 
 
-// 3. Функция getSum принимает параметром целое число и возвращает
-// сумму цифр этого числа
+// // 3. Функция getSum принимает параметром целое число и возвращает
+// // сумму цифр этого числа
+//
+// function getSum(number) {
+//     let arr = String(number).split("")
+//     let sum = 0;
+//     for (el of arr) {
+//         sum = sum + (+el)
+//     }
+//     return sum
+// }
 
-function getSum(number) {
-    let arr = String(number).split("")
-    let sum = 0;
-    for (el of arr) {
-        sum = sum + (+el)
-    }
-    return sum
-}
-
-console.log(getSum(872))
+//console.log(getSum(872))
 // 4. Функция isEvenIndexSumGreater принимает  параметром массив чисел.
 // Если сумма чисел с чётными ИНДЕКСАМИ!!! (0 как чётный индекс) больше
 // суммы чисел с нечётными ИНДЕКСАМИ!!!, то функция возвращает true.
 // В противном случае - false.
 
- function isEvenIndexSumGreater(arr) {
-   let even1 = arr.map((n,i)=> (i%2===0) ? n :0 ).reduce((ac,el)=>ac+el);
-     let noeven=arr.map((n,i)=>i%2===1 ? n :0).reduce((ac,el)=>ac+el);
-     // let sumEven=0;
-     // let sumNoEven=0;
-     //
-     // for(el of even1){
-     //     sumEven=sumEven+el
-     // }
-     // for(el of noeven){
-     //     sumNoEven=sumNoEven+el
-     // }
-     return even1>noeven
- }
+//  function isEvenIndexSumGreater(arr) {
+//    let even1 = arr.map((n,i)=> (i%2===0) ? n :0 ).reduce((ac,el)=>ac+el);
+//      let noeven=arr.map((n,i)=>i%2===1 ? n :0).reduce((ac,el)=>ac+el);
+//      // let sumEven=0;
+//      // let sumNoEven=0;
+//      //
+//      // for(el of even1){
+//      //     sumEven=sumEven+el
+//      // }
+//      // for(el of noeven){
+//      //     sumNoEven=sumNoEven+el
+//      // }
+//      return even1>noeven
+//  }
+//
+// console.log(isEvenIndexSumGreater([3,4,7,10]))
 
-console.log(isEvenIndexSumGreater([3,4,7,10]))
+function Ner(num){
+    let sum=0;
+    if(num<10 || num >99){
+        alert("num<10 && num >99")
+        return
+    } else{
+        let arr=String(num).split('')
+       // for(let i=0;i<arr.length; i++){
+       //     sum=sum+arr[i];
+       //
+       // }
+       sum=arr.reduce((ac,el)=>{
+           ac+el
+       })
+
+    }
+
+    if(sum<=9){
+        alert("<=9")
+    }else{
+        alert("00")
+    }
+
+}
+
+console.log(Ner(98))
