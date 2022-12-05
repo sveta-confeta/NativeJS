@@ -242,14 +242,19 @@ console.log(sumNum2(5, 8, 9, 11))
 //
 // console.log(Ner(98))
 
-let arr=[1,9,65,44,876,987,234,9,2,4]
-let res=[]
+let arr=[1,9,65,44,876,987,234,9,2,4,4]
+let res=false
 for(let i=0;i<arr.length; i++){
-         let der=String(arr[i]);
-         if(der[0]==4 || der[0]==2){
-res.push(der)
-    }
+       if(arr[i]===4){
+           res=true
 
        }
+       }
+if(res===false){
+    alert('no')
+}else{
+    alert('yes')
+}
 console.log(res)
-// console.log(sum)
+
+
