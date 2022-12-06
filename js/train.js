@@ -242,19 +242,15 @@ console.log(sumNum2(5, 8, 9, 11))
 //
 // console.log(Ner(98))
 
-let arr=[1,9,65,44,876,987,234,9,2,4,4]
-let res=false
-for(let i=0;i<arr.length; i++){
-       if(arr[i]===4){
-           res=true
+function Number(num) {
+    let n = num;
+    for ( ; n > 10;) {
 
-       }
-       }
-if(res===false){
-    alert('no')
-}else{
-    alert('yes')
+        n /= 2;
+
+    }
+    return n
 }
-console.log(res)
+console.log(Number(50))
 
 
