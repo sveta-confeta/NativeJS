@@ -242,15 +242,25 @@ console.log(sumNum2(5, 8, 9, 11))
 //
 // console.log(Ner(98))
 
+// function Number(num) {
+//     let n = num;
+//     for ( ; n > 10;) {
+//
+//         n /= 2;
+//
+//     }
+//     return n
+// }
+// console.log(Number(50))
+
 function Number(num) {
     let n = num;
-    for ( ; n > 10;) {
+    let i;
+    for ( i=0; n <= 1000;i++) {
 
-        n /= 2;
+        n *= 3;
 
     }
-    return n
+    return `${n} ${i}`
 }
 console.log(Number(50))
-
-
