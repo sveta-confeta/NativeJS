@@ -253,14 +253,24 @@ console.log(sumNum2(5, 8, 9, 11))
 // }
 // console.log(Number(50))
 
-function Number(num) {
-    let n = num;
-    let i;
-    for ( i=0; n <= 1000;i++) {
+function Number() {
 
-        n *= 3;
+    for ( let i=1; i <= 3;i++) {
+    for ( let j=1; j <= 3;j++){
+      document.write(`${i}${j} `)
+    }
 
     }
-    return `${n} ${i}`
+    return res
 }
-console.log(Number(50))
+console.log(Number())
+
+//
+// for( let i=1; i <= 9;i++) {
+//     for( let j=1; j <= 3;j++){
+//         alert(i)
+//     }
+//
+// }
+
+
