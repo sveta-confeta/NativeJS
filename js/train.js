@@ -265,30 +265,12 @@ console.log(sumNum2(5, 8, 9, 11))
 // }
 // console.log(Number())
 
-let key=['a','b','c'];
-let value=[1,2,3]
-
-let res={};
-
-for ( let i=0; i < 3;i++) {
-    let one=key[i]
-    let two=value[i]
-    // res[one]=two
-    res[two]=one
+let arr=[1,3,7,1,1,10,7,8];
+let j=0;
+for ( let i=0; i<arr.length;i++) {
+    if(arr[i]===1){
+        j++
+    }
 }
-console.log(res)
-
-let sum={'a':1,'b':2,'c':3,'d':4}
-let res2={}
-for(let el in sum) {
-if(sum[el]%2===0){
-    res2[el]=sum[el]
-}
-
-}
-console.log(res2)
-for(let el in sum) {
-    sum[el]=sum[el]*2
-}
-console.log(sum)
+console.log(j)
 
