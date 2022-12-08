@@ -265,12 +265,24 @@ console.log(sumNum2(5, 8, 9, 11))
 // }
 // console.log(Number())
 
-let arr=[1,3,7,1,1,10,7,8];
-let j=0;
-for ( let i=0; i<arr.length;i++) {
-    if(arr[i]===1){
-        j++
-    }
-}
-console.log(j)
+// let arr=[1,3,7,1,1,10,10,7,8,8,8,8];
+// let count={};
+// for ( let el in arr) {
+//     count[el]++
+//
+//
+// }
+// console.log(count)count
 
+let arr=[[1,2],[3,4],[5,6]];
+let sum=0;
+for(let el of arr){
+    let res=0
+    for(let e of el){
+        res=res+e
+    }
+    sum=sum+res
+
+}
+
+console.log(sum)
