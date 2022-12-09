@@ -274,15 +274,42 @@ console.log(sumNum2(5, 8, 9, 11))
 // }
 // console.log(count)count
 
-let arr=[[1,2],[3,4],[5,6]];
-let sum=0;
-for(let el of arr){
-    let res=0
-    for(let e of el){
-        res=res+e
-    }
-    sum=sum+res
+// let arr=[[1,2],[3,4],[5,6]];
+// let sum=0;
+// for(let el of arr){
+//     let res=0
+//     for(let e of el){
+//         res=res+e
+//     }
+//     sum=sum+res
+//
+// }
+//
+// console.log(sum)
 
+let a=10 //
+
+
+function f(arg){
+    function inner(){
+        a=a+c+arg ;
+        console.log(a)
+
+    }
+    let g=50;
+    a=a+g; //60
+
+
+    return inner
 }
 
-console.log(sum)
+var c=500
+
+let func=f(100)
+
+func();
+func();
+
+
+
+
