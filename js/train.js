@@ -287,29 +287,48 @@ console.log(sumNum2(5, 8, 9, 11))
 //
 // console.log(sum)
 
-let a=10 //
+// let a=10 //
+//
+//
+// function f(arg){
+//     function inner(){
+//         a=a+c+arg ;
+//         console.log(a)
+//
+//     }
+//     let g=50;
+//     a=a+g; //60
+//
+//
+//     return inner
+// }
+//
+// var c=500
+//
+// let func=f(100)
+//
+// func();
+// func()
 
+// const pow=(num)=>{
+//     if(num===1){
+//         return num;
+//     }
+//
+//     return num+pow(num-1)
+// }
+//
+// console.log(pow(10))
 
-function f(arg){
-    function inner(){
-        a=a+c+arg ;
-        console.log(a)
+let arrow=[[1,3,7,1],[1,10,10],[7,8,8,8,8]];
+let sum=0;
 
+for (let element of arrow){
+    for(let el of element){
+       sum=sum+el
     }
-    let g=50;
-    a=a+g; //60
-
-
-    return inner
 }
-
-var c=500
-
-let func=f(100)
-
-func();
-func();
-
+document.write(sum)
 
 
 
