@@ -320,15 +320,25 @@ console.log(sumNum2(5, 8, 9, 11))
 //
 // console.log(pow(10))
 
-let arrow=[[1,3,7,1],[1,10,10],[7,8,8,8,8]];
-let sum=0;
+// let arrow=[[1,3,7,1],[1,10,10],[7,8,8,8,8]];
+// let sum=0;
+//
+// for (let element of arrow){
+//     for(let el of element){
+//        sum=sum+el
+//     }
+// }
+// document.write(sum)
 
-for (let element of arrow){
-    for(let el of element){
-       sum=sum+el
+let arr=[]
+for (let i=0; i<=2; i++){
+arr[i]=[]
+    for (let j=0; j<=1; j++) {
+        arr[i][j] = []
+        for (let k = 0; k <= 4; k++) {
+            arr[i][j][k] = k + 1
+        }
     }
 }
-document.write(sum)
-
-
+console.log(arr)
 
