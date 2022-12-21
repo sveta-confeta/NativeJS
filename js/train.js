@@ -330,15 +330,30 @@ console.log(sumNum2(5, 8, 9, 11))
 // }
 // document.write(sum)
 
-let arr=[]
-for (let i=0; i<=2; i++){
-arr[i]=[]
-    for (let j=0; j<=1; j++) {
-        arr[i][j] = []
-        for (let k = 0; k <= 4; k++) {
-            arr[i][j][k] = k + 1
+// let arr=[]
+// for (let i=0; i<=2; i++){
+// arr[i]=[]
+//     for (let j=0; j<=1; j++) {
+//         arr[i][j] = []
+//         for (let k = 0; k <= 4; k++) {
+//             arr[i][j][k] = k + 1
+//         }
+//     }
+// }
+// console.log(arr)
+let obj = [
+    {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3']},
+    {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3'], 3: ['ab', 'hj', 'data3']},
+    {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3'], 3: ['ab', 'hj', 'data3']},
+]
+
+for (let element of obj) { //element {}
+    for (let el in element) {//el 1
+        // console.log(element[el]) //[]
+        for (let i of element[el]) {
+            console.log(i+' ')
         }
     }
 }
-console.log(arr)
+
 
