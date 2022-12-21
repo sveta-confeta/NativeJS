@@ -341,19 +341,29 @@ console.log(sumNum2(5, 8, 9, 11))
 //     }
 // }
 // console.log(arr)
-let obj = [
-    {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3']},
-    {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3'], 3: ['ab', 'hj', 'data3']},
-    {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3'], 3: ['ab', 'hj', 'data3']},
-]
+// let obj = [
+//     {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3']},
+//     {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3'], 3: ['ab', 'hj', 'data3']},
+//     {1: ['ab', 'hj', 'data3'], 2: ['ab', 'hj', 'data3'], 3: ['ab', 'hj', 'data3']},
+// ]
+//
+// for (let element of obj) { //element {}
+//     for (let el in element) {//el 1
+//         // console.log(element[el]) //[]
+//         for (let i of element[el]) {
+//             console.log(i+' ')
+//         }
+//     }
+// }
 
-for (let element of obj) { //element {}
-    for (let el in element) {//el 1
-        // console.log(element[el]) //[]
-        for (let i of element[el]) {
-            console.log(i+' ')
-        }
-    }
+function Test (num){
+    let obj={}
+    let sum=Math.sqrt(num)
+    obj['floor']=Math.floor(sum)
+    obj['ceil']=Math.ceil(sum)
+    return obj
+
 }
 
+console.log(Test(587))
 
