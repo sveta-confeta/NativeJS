@@ -385,12 +385,12 @@ console.log(sumNum2(5, 8, 9, 11))
 
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
-function sum(num){
-    return function (num2){
-        return num + num2
-    }
-}
-console.log(sum(3)(6))
+// function sum(num){
+//     return function (num2){
+//         return num + num2
+//     }
+// }
+//console.log(sum(3)(6))
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
 // const counter = makeCounter();
@@ -399,6 +399,18 @@ console.log(sum(3)(6))
 // const counter2 = makeCounter();
 // counter2(); // 1
 // counter(); // 3
+function makeCounter(){
+    let num=0
+    return function() {
+        return ++num//
+    };
+}
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+const counter2 = makeCounter();
+console.log(counter2()); // 1
+console.log(counter()); // 3
 
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
