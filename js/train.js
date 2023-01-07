@@ -429,38 +429,60 @@ console.log(sumNum2(5, 8, 9, 11))
 // 4) superSum(3)(2,5,3) //10
 // 5) superSum(3)(2,5)(3) //10
 // 6) superSum(3)(2,5)(3,9) //10
-function superSum(col) {
-    if (col === 0) {
-        return 0;
-    } else {
-        return function (num1) {
-            return function (num2,num4) {
-                if(num4){
-                    return num1 + num2 + num4;
-                }
-                return function (num3) {
-                    return num1 + num2 + num3;
-                }
-
-            }
-        }
-
-    }
-}
- console.log(superSum(3)(2)(5,3))
+// function superSum(col) {
+//     if (col === 0) {
+//         return 0;
+//     } else {
+//         return function (num1) {
+//             return function (num2,num4) {
+//                 if(num4){
+//                     return num1 + num2 + num4;
+//                 }
+//                 return function (num3) {
+//                     return num1 + num2 + num3;
+//                 }
+//
+//             }
+//         }
+//
+//     }
+// }
+//  console.log(superSum(3)(2)(5,3))
 
 // 4) superSum(3)(2,5,3) //10
 // 5) superSum(3)(2,5)(3) //10
 // 6) superSum(3)(2,5)(3,9) //10
 
-// Task 05
-// решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
+function inArray(arr) {
+    return function(x) {
+        return arr.includes(x);
+    };
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+
+function inBetween(array){
+        let arr2=[];
+    for(let i =0; i<=array.length;i++){
+     if (arr.includes(array[i])===true){
+arr2.push(array[i])
+        }
+
+    }
+    return arr2
+}
+console.log(inBetween([1,5,10,33,3]))
+
+
+
+
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
-// just a plug
-//export default () => {};
+
+
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures
 // https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-%D1%80%D0%B0%D0%B7-%D0%B8-%D0%BD%D0%B0%D0%B2%D1%81%D0%B5%D0%B3%D0%B4%D0%B0-c211805b6898
 // https://www.youtube.com/watch?v=pahO5XjnfLA
@@ -473,5 +495,5 @@ function superSum(col) {
 // https://habr.com/ru/company/ruvds/blog/419997/
 
 // Recursion
-// https://learn.javascript.ru/recursion
+// https://learn.javascript.ru/recursion //решить все задачи
 // https://www.youtube.com/watch?v=Kuq6oIN3PH0
