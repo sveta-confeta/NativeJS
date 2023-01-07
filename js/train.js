@@ -399,18 +399,18 @@ console.log(sumNum2(5, 8, 9, 11))
 // const counter2 = makeCounter();
 // counter2(); // 1
 // counter(); // 3
-function makeCounter(){
-    let num=0
-    return function() {
-        return ++num//
-    };
-}
-const counter = makeCounter();
-console.log(counter()); // 1
-console.log(counter()); // 2
-const counter2 = makeCounter();
-console.log(counter2()); // 1
-console.log(counter()); // 3
+// function makeCounter(){
+//     let num=0
+//     return function() {
+//         return ++num//
+//     };
+// }
+// const counter = makeCounter();
+// console.log(counter()); // 1
+// console.log(counter()); // 2
+// const counter2 = makeCounter();
+// console.log(counter2()); // 1
+// console.log(counter()); // 3
 
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
@@ -429,8 +429,29 @@ console.log(counter()); // 3
 // 4) superSum(3)(2,5,3) //10
 // 5) superSum(3)(2,5)(3) //10
 // 6) superSum(3)(2,5)(3,9) //10
+function superSum(col) {
+    if (col === 0) {
+        return 0;
+    } else {
+        return function (num1) {
+            return function (num2,num4) {
+                if(num4){
+                    return num1 + num2 + num4;
+                }
+                return function (num3) {
+                    return num1 + num2 + num3;
+                }
 
-// P.S. типизируйте только аргументы, а при вызове функции используйте @ts-ignore
+            }
+        }
+
+    }
+}
+ console.log(superSum(3)(2)(5,3))
+
+// 4) superSum(3)(2,5,3) //10
+// 5) superSum(3)(2,5)(3) //10
+// 6) superSum(3)(2,5)(3,9) //10
 
 // Task 05
 // решить все задачи по рекурсии которые даны в конце статьи https://learn.javascript.ru/recursion
