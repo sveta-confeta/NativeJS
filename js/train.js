@@ -453,28 +453,64 @@ console.log(sumNum2(5, 8, 9, 11))
 // 5) superSum(3)(2,5)(3) //10
 // 6) superSum(3)(2,5)(3,9) //10
 
-function inArray(arr) {
-    return function(x) {
-        return arr.includes(x);
-    };
-}
+// function inArray(arr) {
+//     return function(x) {
+//         return arr.includes(x);
+//     };
+// }
+//
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+//
+//
+// function inBetween(array){
+//         let arr2=[];
+//     for(let i =0; i<=array.length;i++){
+//      if (arr.includes(array[i])===true){
+// arr2.push(array[i])
+//         }
+//
+//     }
+//     return arr2
+// }
+// console.log(inBetween([1,5,10,33,3]))
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
 
 
-function inBetween(array){
-        let arr2=[];
-    for(let i =0; i<=array.length;i++){
-     if (arr.includes(array[i])===true){
-arr2.push(array[i])
-        }
 
+var makeCounter = function() {
+    var privateCounter = 0;
+
+    function changeBy(val) {
+        privateCounter += val;
     }
-    return arr2
-}
-console.log(inBetween([1,5,10,33,3]))
 
+    return {
+        increment: function() {
+            changeBy(1);
+        },
+        decrement: function() {
+            changeBy(-1);
+        },
+        value: function() {
+            return privateCounter;
+        }
+    }
+};
 
+var Counter1 = makeCounter();
+var Counter2 = makeCounter();
+
+alert(Counter1.value()); /* Alerts 0 */
+
+Counter1.increment();
+Counter1.increment();
+
+alert(Counter1.value()); /* Alerts 2 */
+
+Counter1.decrement();
+
+alert(Counter1.value()); /* Alerts 1 */
+alert(Counter2.value()); /* Alerts 0 */
 
 
 
@@ -483,7 +519,7 @@ console.log(inBetween([1,5,10,33,3]))
 
 
 
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures
+//
 // https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-%D1%80%D0%B0%D0%B7-%D0%B8-%D0%BD%D0%B0%D0%B2%D1%81%D0%B5%D0%B3%D0%B4%D0%B0-c211805b6898
 // https://www.youtube.com/watch?v=pahO5XjnfLA
 
