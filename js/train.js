@@ -477,58 +477,66 @@ console.log(sumNum2(5, 8, 9, 11))
 
 
 
-var makeCounter = function() {
-    var privateCounter = 0;
-
-    function changeBy(val) {
-        privateCounter += val;
-    }
-
-    return {
-        increment: function() {
-            changeBy(1);
-        },
-        decrement: function() {
-            changeBy(-1);
-        },
-        value: function() {
-            return privateCounter;
-        }
-    }
-};
-
-var Counter1 = makeCounter();
-var Counter2 = makeCounter();
-
-alert(Counter1.value()); /* Alerts 0 */
-
-Counter1.increment();
-Counter1.increment();
-
-alert(Counter1.value()); /* Alerts 2 */
-
-Counter1.decrement();
-
-alert(Counter1.value()); /* Alerts 1 */
-alert(Counter2.value()); /* Alerts 0 */
+// var makeCounter = function() {
+//     var privateCounter = 0;
+//
+//     function changeBy(val) {
+//         privateCounter += val;
+//     }
+//
+//     return {
+//         increment: function() {
+//             changeBy(1);
+//         },
+//         decrement: function() {
+//             changeBy(-1);
+//         },
+//         value: function() {
+//             return privateCounter;
+//         }
+//     }
+// };
+//
+// var Counter1 = makeCounter();
+// var Counter2 = makeCounter();
+//
+// alert(Counter1.value()); /* Alerts 0 */
+//
+// Counter1.increment();
+// Counter1.increment();
+//
+// alert(Counter1.value()); /* Alerts 2 */
+//
+// Counter1.decrement();
+//
+// alert(Counter1.value()); /* Alerts 1 */
+// alert(Counter2.value()); /* Alerts 0 */
 
 
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
+// function creatCalc(n){
+//     return function (){
+//         console.log(1000* n)
+//     }
+// }
+// let calc=creatCalc(45);
+// calc();
+// calc()
+// calc=creatCalc(40);
+function fn(){
+    let sum=0;
+    let i=1
+    for( ;i<=100;i++){
+        sum=sum+ i
+        if(sum>=100){
+            return i        }
+    }
+}
+console.log(fn())
 
-
-//
-// https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B2-javascript-%D1%80%D0%B0%D0%B7-%D0%B8-%D0%BD%D0%B0%D0%B2%D1%81%D0%B5%D0%B3%D0%B4%D0%B0-c211805b6898
-// https://www.youtube.com/watch?v=pahO5XjnfLA
-
-//// Сurrying
-// https://learn.javascript.ru/currying-partials
-// https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC-%D0%BA%D0%B0%D1%80%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B2-javascript-5ec4a1d88827
-
-// Pattern Module
-// https://habr.com/ru/company/ruvds/blog/419997/
 
 // Recursion
 // https://learn.javascript.ru/recursion //решить все задачи
